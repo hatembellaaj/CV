@@ -68,6 +68,52 @@ h1 {
   margin-top: 22px;
 }
 
+.positioning {
+  margin-top: 22px;
+}
+
+.positioning h2 {
+  font-size: 16px;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.positioning-block {
+  border-top: 2px solid var(--line);
+  padding: 10px 0 6px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.positioning-block:last-of-type {
+  border-bottom: 2px solid var(--line);
+  padding-bottom: 10px;
+}
+
+.positioning-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.positioning-subtitle {
+  font-weight: 700;
+  margin: 8px 0 4px;
+}
+
+.positioning-note {
+  margin: 6px 0 0;
+  font-weight: 600;
+}
+
+.positioning ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.positioning li {
+  margin: 0 0 4px;
+}
+
 .skills h2 {
   font-size: 14px;
   margin: 0 0 8px;
