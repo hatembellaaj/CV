@@ -24,10 +24,10 @@
         <div class="positioning-block">
           <div class="positioning-title">Skills</div>
           <ul>
-            <li>Plateforme GenAI/RAG industrialisée (ingestion, chunking, retrieval, reranking, compression, sources obligatoires).</li>
+            <li>Plateforme GenAI/RAG industrialisée (ingestion, chunking, retrieval hybride BM25 + vecteur, reranking BERT, compression, sources obligatoires).</li>
             <li>Backend IA : Python 3.11+, FastAPI, PostgreSQL/PGVector, Redis, Celery, SSE/WebSockets, extensions MCP.</li>
             <li>Orchestration LLM : LangChain, LangGraph, LiteLLM, Langfuse, MCP (tools externes).</li>
-            <li>LLM multi-providers : Azure OpenAI, OpenAI, Anthropic, Vertex AI, Bedrock, Mistral.</li>
+            <li>LLM multi-providers : Azure OpenAI, OpenAI (GPT-4o, GPT-4o mini), Anthropic, Vertex AI, Bedrock, Mistral.</li>
             <li>Frontend moderne : React 18, TypeScript, Vite, MUI, Zustand, TanStack Query/Router/Table.</li>
             <li>Infra &amp; DevOps : Docker/Compose, GitLab CI/CD, Terraform Azure, Cloud Run GCP.</li>
             <li>Qualité &amp; tests : pytest, Vitest, Testing Library, ruff, eslint, prettier, SonarQube.</li>
@@ -39,8 +39,9 @@
           <div class="positioning-title">Compétences clés IA &amp; GenAI</div>
           <div class="positioning-subtitle">IA générative &amp; RAG</div>
           <ul>
-            <li>Conception et exploitation de pipelines RAG (ingestion, chunking, retrieval, reranking, compression)</li>
-            <li>Vector search (PGVector), embeddings, scoring, filtrage contextuel</li>
+            <li>Conception et exploitation de pipelines RAG (ingestion, chunking, retrieval hybride BM25 + vecteur, reranking, compression)</li>
+            <li>Vector search (PGVector), embeddings (text-embedding-3), scoring, filtrage contextuel</li>
+            <li>Reranking sémantique (BERT) et recherche hybride pour pertinence métier</li>
             <li>Évaluation &amp; non-régression IA : précision@k, taux de sources, jeux de tests “golden”</li>
             <li>Optimisation coût / qualité / latence (routing modèles, top-k adaptatif, compression de contexte)</li>
           </ul>
@@ -53,7 +54,7 @@
           <div class="positioning-subtitle">Modèles &amp; providers LLM</div>
           <ul>
             <li>Azure OpenAI (GPT-4.x, embeddings)</li>
-            <li>OpenAI API</li>
+            <li>OpenAI API (GPT-4o, GPT-4o mini)</li>
             <li>Anthropic Claude</li>
             <li>Google Vertex AI</li>
             <li>AWS Bedrock</li>
@@ -321,7 +322,7 @@
 
             <p class="experience-subtitle">Environnement IA</p>
             <ul>
-              <li>IA : RAG, embeddings, vector search, multi-LLM</li>
+              <li>IA : RAG, embeddings text-embedding-3, retrieval hybride BM25 + vecteur, reranking BERT, multi-LLM</li>
               <li>Plateforme : FastAPI, PostgreSQL/PGVector, Redis</li>
               <li>Cloud IA : Azure OpenAI, Azure AI Foundry, Vertex AI, Bedrock</li>
               <li>Observabilité IA : Langfuse, métriques qualité/coût</li>
