@@ -316,7 +316,7 @@ h1 {
 }
 
 @page {
-  size: A4;
+  size: A4 portrait;
   margin: 10mm;
 }
 
