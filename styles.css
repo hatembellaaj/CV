@@ -315,6 +315,49 @@ h1 {
   margin: 0 0 6px;
 }
 
+@page {
+  size: A4;
+  margin: 10mm;
+}
+
+@media print {
+  body {
+    background: #fff;
+    margin: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 190mm;
+    min-height: 277mm;
+    margin: 0 0 10mm;
+    padding: 9mm 12mm 14mm;
+    box-shadow: none;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .page:last-of-type {
+    margin-bottom: 0;
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  .positioning-block,
+  .skill-block,
+  .info-block,
+  .experience-row {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .page-footer {
+    bottom: 6mm;
+    right: 12mm;
+  }
+}
+
 @media (max-width: 960px) {
   .page {
     width: 100%;
