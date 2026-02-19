@@ -316,39 +316,6 @@ h1 {
 }
 
 
-@page {
-  size: A4 portrait;
-  margin: 10mm;
-}
-
-@media print {
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    background: #fff;
-  }
-
-  .page {
-    width: auto;
-    margin: 0;
-    padding: 8mm 10mm 12mm;
-    box-shadow: none;
-    break-after: page;
-    page-break-after: always;
-  }
-
-  .page:last-of-type {
-    break-after: auto;
-    page-break-after: auto;
-  }
-
-  .page-footer {
-    bottom: 6mm;
-    right: 10mm;
-  }
-}
-
 @media (max-width: 960px) {
   .page {
     width: 100%;
