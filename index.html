@@ -30,6 +30,11 @@
             <li>Infra &amp; DevOps : Docker/Compose, GitLab CI/CD, Terraform Azure, Cloud Run GCP.</li>
             <li>Qualité &amp; tests : pytest, Vitest, Testing Library, ruff, eslint, prettier, SonarQube.</li>
             <li>Documentation : MkDocs + mkdocs-material, mermaid, pymdown-extensions.</li>
+            <li>Conception et industrialisation d’une plateforme GenAI sur Azure, déployée en Infrastructure as Code avec Terraform (DEV, INT, REC, PROD).</li>
+            <li>Mise en place d’un pipeline CI/CD Azure DevOps de bout en bout : build/push Front &amp; Back vers Azure Container Registry, déploiement conditionnel branche/tag, plan/apply Terraform automatisé.</li>
+            <li>Sécurisation de la plateforme via Azure Key Vault (secrets applicatifs, OIDC, certificats SSL, clés de chiffrement) et identités managées avec RBAC.</li>
+            <li>Exposition des services via Azure Application Gateway (routage path-based API/front, HTTP→HTTPS, diagnostics) et observabilité avec Log Analytics.</li>
+            <li>Déploiement sur Azure Container Apps (front/back), PostgreSQL Flexible Server en réseau privé, DNS privé et stockage Data Lake Gen2.</li>
           </ul>
         </div>
 
@@ -42,6 +47,11 @@
             <li>Reranking sémantique (BERT) et recherche hybride pour pertinence métier</li>
             <li>Évaluation &amp; non-régression IA : précision@k, taux de sources, jeux de tests “golden”</li>
             <li>Optimisation coût / qualité / latence (routing modèles, top-k adaptatif, compression de contexte)</li>
+            <li>Industrialisation d'une plateforme GenAI Azure multi-environnements (DEV/INT/REC/PROD) avec Infrastructure as Code Terraform.</li>
+            <li>Chaîne CI/CD Azure DevOps complète : build/push ACR, déploiements conditionnels, automatisation Terraform plan/apply.</li>
+            <li>Sécurisation cloud : Azure Key Vault, OIDC, certificats SSL, clés de chiffrement, Managed Identities et RBAC.</li>
+            <li>Exposition et résilience via Azure Application Gateway + monitoring centralisé dans Log Analytics.</li>
+            <li>Déploiement applicatif sur Azure Container Apps et persistance via PostgreSQL Flexible Server privé + Data Lake Gen2.</li>
           </ul>
 
           <div class="positioning-subtitle">Orchestration &amp; frameworks IA</div>
@@ -310,6 +320,18 @@
               <li>Pilotage des coûts IA (tokens, embeddings, quotas, cache).</li>
               <li>Sécurisation des usages IA (isolation des données, permissions ABAC).</li>
               <li>Contribution à la gouvernance IA (environnements, modèles, accès).</li>
+            </ul>
+
+            <p class="experience-subtitle">Plateforme GenAI Azure industrialisée (AGIRC-ARRCO)</p>
+            <ul>
+              <li>Conception et industrialisation d’une plateforme GenAI sur Azure, déployée en Infrastructure as Code avec Terraform sur les environnements DEV, INT, REC et PROD.</li>
+              <li>Mise en place d’un pipeline CI/CD Azure DevOps de bout en bout : build et push des images Front/Back vers Azure Container Registry, déploiement conditionnel par branche/tag, automatisation Terraform plan/apply.</li>
+              <li>Sécurisation de la plateforme via Azure Key Vault (secrets applicatifs, OIDC, certificats SSL, clés de chiffrement) et identités managées avec RBAC.</li>
+              <li>Exposition des services via Azure Application Gateway (routage path-based API/front, redirection HTTP→HTTPS, diagnostics) et observabilité via Log Analytics.</li>
+              <li>Déploiement applicatif sur Azure Container Apps (back/front), PostgreSQL Flexible Server en réseau privé, DNS privé et stockage Data Lake Gen2.</li>
+              <li>Ressources structurantes : RG AA_RG_ARIA_DEV/INT/REC/PROD/SHARED, ACR aaacrariashared-hfdgbfd2aecvbyg3.azurecr.io, Key Vault vlt-aria-app-{env}, Log Analytics law-aria-app-{env}.</li>
+              <li>Topologie réseau et services : vnt-aria-app-{env} (subnets pgsql, aci, aca, agw), psq-aria-app-{env} / pdb-aria-app-{env}, DNS privé {env}-aria-app.postgres.database.azure.com, acae-aria-app-{env}.</li>
+              <li>Exécution applicative : aca-aria-app-back-{env}, aca-aria-app-front-{env}, agw-aria-app-{env} + pip-aria-app-{env}, identités uac-aria-app-{env} &amp; uag-aria-app-{env}, stockage aria-app-{env}-data.</li>
             </ul>
 
             <p class="experience-subtitle">Résultats IA concrets</p>
