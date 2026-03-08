@@ -114,6 +114,26 @@ h1 {
   margin: 0 0 4px;
 }
 
+.tech-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+.tech-table th,
+.tech-table td {
+  border: 1px solid #b8b8b8;
+  padding: 4px 6px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.tech-table th {
+  background: #f3f3f3;
+  font-weight: 700;
+}
+
 .skills h2 {
   font-size: 14px;
   margin: 0 0 8px;

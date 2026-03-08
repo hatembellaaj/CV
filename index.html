@@ -87,6 +87,55 @@
           <ul>
             <li>Python 3.11+, FastAPI, PostgreSQL + PGVector, Redis, Celery, Clean / Hexagonal Architecture, pluggy (extensions), SSE, WebSockets.</li>
           </ul>
+
+          <div class="positioning-subtitle">Stack RAISE (domaine / techno / rôle / localisation)</div>
+          <table class="tech-table">
+            <thead>
+              <tr>
+                <th>Domaine</th>
+                <th>Technologie / Outil</th>
+                <th>Rôle dans la solution</th>
+                <th>Où dans RAISE (exemples)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Front</td><td>React</td><td>Framework IHM SPA</td><td>package.json</td></tr>
+              <tr><td>Front</td><td>TypeScript</td><td>Typage statique frontend</td><td>front/tsconfig*.json</td></tr>
+              <tr><td>Front</td><td>Vite</td><td>Serveur dev + build frontend</td><td>package.json scripts</td></tr>
+              <tr><td>Front</td><td>MUI + Emotion</td><td>Composants UI + styling</td><td>deps @mui/*, @emotion/*</td></tr>
+              <tr><td>Front</td><td>TanStack Router</td><td>Routing côté client</td><td>dep @tanstack/react-router</td></tr>
+              <tr><td>Front</td><td>TanStack Query</td><td>Cache / appels API / synchro données</td><td>dep @tanstack/react-query</td></tr>
+              <tr><td>Front</td><td>TanStack Table</td><td>Grilles/tabulaires</td><td>dep @tanstack/react-table</td></tr>
+              <tr><td>Front</td><td>Zustand</td><td>State management léger</td><td>dep zustand</td></tr>
+              <tr><td>Front</td><td>i18next + react-i18next</td><td>Internationalisation</td><td>deps + locales</td></tr>
+              <tr><td>Front</td><td>MSAL + MGT</td><td>Intégration auth Microsoft</td><td>deps @azure/msal-browser, @microsoft/mgt-*</td></tr>
+              <tr><td>Back</td><td>FastAPI</td><td>API backend principale</td><td>server.py</td></tr>
+              <tr><td>Back</td><td>Uvicorn</td><td>Serveur ASGI d'exécution</td><td>pyproject.toml</td></tr>
+              <tr><td>Back</td><td>Pydantic + pydantic-settings</td><td>Validation des données + config</td><td>pyproject.toml</td></tr>
+              <tr><td>Back</td><td>Authlib + PyJWT</td><td>OAuth/OIDC + JWT</td><td>pyproject.toml</td></tr>
+              <tr><td>IA</td><td>LangChain</td><td>Orchestration LLM, tools, RAG</td><td>pyproject.toml + extensions</td></tr>
+              <tr><td>IA</td><td>LangGraph</td><td>Workflows agents multi-étapes</td><td>pyproject.toml, extension langgraph</td></tr>
+              <tr><td>IA</td><td>LiteLLM + langchain_litellm</td><td>Abstraction multi-fournisseurs LLM</td><td>pyproject.toml</td></tr>
+              <tr><td>IA</td><td>Langfuse</td><td>Observabilité/traces LLM</td><td>extension litellm_langfuse</td></tr>
+              <tr><td>Extensibilité</td><td>Pluggy</td><td>Système de hooks/plugins backend</td><td>hooks.py</td></tr>
+              <tr><td>IA/Interop</td><td>MCP (mcp, fastmcp, langchain_mcp_adapters)</td><td>Connexion standardisée à outils externes</td><td>pyproject.toml, docs MCP</td></tr>
+              <tr><td>Ingestion docs</td><td>MarkItDown</td><td>Conversion fichiers en markdown pour ingestion</td><td>small_file_handler.py</td></tr>
+              <tr><td>Async</td><td>Celery</td><td>Exécution tâches asynchrones</td><td>docker-compose-dev.yml</td></tr>
+              <tr><td>Async</td><td>Redis</td><td>Broker/queue et cache</td><td>docker-compose-dev.yml</td></tr>
+              <tr><td>Async</td><td>Flower</td><td>Monitoring workers Celery</td><td>pyproject.toml, compose dev</td></tr>
+              <tr><td>Data</td><td>PostgreSQL</td><td>Base relationnelle principale</td><td>docker-compose*.yml, Terraform DB</td></tr>
+              <tr><td>Data</td><td>pgvector</td><td>Recherche vectorielle/embeddings</td><td>image ankane/pgvector, docs DB</td></tr>
+              <tr><td>Data</td><td>Psycopg + psycopg-pool</td><td>Connexion et pooling PostgreSQL</td><td>pyproject.toml</td></tr>
+              <tr><td>Data</td><td>Flyway</td><td>Migrations SQL versionnées</td><td>scripts, README.md</td></tr>
+              <tr><td>Infra</td><td>Docker / Docker Compose</td><td>Conteneurisation local/dev/prod</td><td>Dockerfile, docker-compose*.yml</td></tr>
+              <tr><td>Infra</td><td>Terraform</td><td>Provisioning infra cloud</td><td>infra/azure/**</td></tr>
+              <tr><td>Infra</td><td>Azure Key Vault</td><td>Gestion des secrets</td><td>module 01_secrets</td></tr>
+              <tr><td>Infra</td><td>Azure ACI</td><td>Hébergement conteneurs app</td><td>module 05_app</td></tr>
+              <tr><td>Infra</td><td>Azure Application Gateway</td><td>Load balancer / entrée HTTP(S)</td><td>module 06_loadbalancer</td></tr>
+              <tr><td>Infra</td><td>Azure Log Analytics</td><td>Logs/observabilité infra</td><td>module 02_observabilty</td></tr>
+              <tr><td>CI/CD</td><td>Azure DevOps Pipeline</td><td>Plan/apply Terraform + exécution Flyway</td><td>azure-pipelines-terraform.yml</td></tr>
+            </tbody>
+          </table>
         </div>
 
       </section>
@@ -351,6 +400,55 @@
               <li>Observabilité IA : Langfuse, métriques qualité/coût</li>
               <li>Sécurité IA : OIDC, scopes, ABAC, API Management</li>
             </ul>
+
+            <p class="experience-subtitle">Stack détaillée RAISE (AGIRC-ARRCO)</p>
+            <table class="tech-table">
+              <thead>
+                <tr>
+                  <th>Domaine</th>
+                  <th>Technologie / Outil</th>
+                  <th>Rôle dans la solution</th>
+                  <th>Où dans RAISE (exemples)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Front</td><td>React</td><td>Framework IHM SPA</td><td>package.json</td></tr>
+                <tr><td>Front</td><td>TypeScript</td><td>Typage statique frontend</td><td>front/tsconfig*.json</td></tr>
+                <tr><td>Front</td><td>Vite</td><td>Serveur dev + build frontend</td><td>package.json scripts</td></tr>
+                <tr><td>Front</td><td>MUI + Emotion</td><td>Composants UI + styling</td><td>deps @mui/*, @emotion/*</td></tr>
+                <tr><td>Front</td><td>TanStack Router</td><td>Routing côté client</td><td>dep @tanstack/react-router</td></tr>
+                <tr><td>Front</td><td>TanStack Query</td><td>Cache / appels API / synchro données</td><td>dep @tanstack/react-query</td></tr>
+                <tr><td>Front</td><td>TanStack Table</td><td>Grilles/tabulaires</td><td>dep @tanstack/react-table</td></tr>
+                <tr><td>Front</td><td>Zustand</td><td>State management léger</td><td>dep zustand</td></tr>
+                <tr><td>Front</td><td>i18next + react-i18next</td><td>Internationalisation</td><td>deps + locales</td></tr>
+                <tr><td>Front</td><td>MSAL + MGT</td><td>Intégration auth Microsoft</td><td>deps @azure/msal-browser, @microsoft/mgt-*</td></tr>
+                <tr><td>Back</td><td>FastAPI</td><td>API backend principale</td><td>server.py</td></tr>
+                <tr><td>Back</td><td>Uvicorn</td><td>Serveur ASGI d'exécution</td><td>pyproject.toml</td></tr>
+                <tr><td>Back</td><td>Pydantic + pydantic-settings</td><td>Validation des données + config</td><td>pyproject.toml</td></tr>
+                <tr><td>Back</td><td>Authlib + PyJWT</td><td>OAuth/OIDC + JWT</td><td>pyproject.toml</td></tr>
+                <tr><td>IA</td><td>LangChain</td><td>Orchestration LLM, tools, RAG</td><td>pyproject.toml + extensions</td></tr>
+                <tr><td>IA</td><td>LangGraph</td><td>Workflows agents multi-étapes</td><td>pyproject.toml, extension langgraph</td></tr>
+                <tr><td>IA</td><td>LiteLLM + langchain_litellm</td><td>Abstraction multi-fournisseurs LLM</td><td>pyproject.toml</td></tr>
+                <tr><td>IA</td><td>Langfuse</td><td>Observabilité/traces LLM</td><td>extension litellm_langfuse</td></tr>
+                <tr><td>Extensibilité</td><td>Pluggy</td><td>Système de hooks/plugins backend</td><td>hooks.py</td></tr>
+                <tr><td>IA/Interop</td><td>MCP (mcp, fastmcp, langchain_mcp_adapters)</td><td>Connexion standardisée à outils externes</td><td>pyproject.toml, docs MCP</td></tr>
+                <tr><td>Ingestion docs</td><td>MarkItDown</td><td>Conversion fichiers en markdown pour ingestion</td><td>small_file_handler.py</td></tr>
+                <tr><td>Async</td><td>Celery</td><td>Exécution tâches asynchrones</td><td>docker-compose-dev.yml</td></tr>
+                <tr><td>Async</td><td>Redis</td><td>Broker/queue et cache</td><td>docker-compose-dev.yml</td></tr>
+                <tr><td>Async</td><td>Flower</td><td>Monitoring workers Celery</td><td>pyproject.toml, compose dev</td></tr>
+                <tr><td>Data</td><td>PostgreSQL</td><td>Base relationnelle principale</td><td>docker-compose*.yml, Terraform DB</td></tr>
+                <tr><td>Data</td><td>pgvector</td><td>Recherche vectorielle/embeddings</td><td>image ankane/pgvector, docs DB</td></tr>
+                <tr><td>Data</td><td>Psycopg + psycopg-pool</td><td>Connexion et pooling PostgreSQL</td><td>pyproject.toml</td></tr>
+                <tr><td>Data</td><td>Flyway</td><td>Migrations SQL versionnées</td><td>scripts, README.md</td></tr>
+                <tr><td>Infra</td><td>Docker / Docker Compose</td><td>Conteneurisation local/dev/prod</td><td>Dockerfile, docker-compose*.yml</td></tr>
+                <tr><td>Infra</td><td>Terraform</td><td>Provisioning infra cloud</td><td>infra/azure/**</td></tr>
+                <tr><td>Infra</td><td>Azure Key Vault</td><td>Gestion des secrets</td><td>module 01_secrets</td></tr>
+                <tr><td>Infra</td><td>Azure ACI</td><td>Hébergement conteneurs app</td><td>module 05_app</td></tr>
+                <tr><td>Infra</td><td>Azure Application Gateway</td><td>Load balancer / entrée HTTP(S)</td><td>module 06_loadbalancer</td></tr>
+                <tr><td>Infra</td><td>Azure Log Analytics</td><td>Logs/observabilité infra</td><td>module 02_observabilty</td></tr>
+                <tr><td>CI/CD</td><td>Azure DevOps Pipeline</td><td>Plan/apply Terraform + exécution Flyway</td><td>azure-pipelines-terraform.yml</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
         <div class="experience-row">
