@@ -88,54 +88,6 @@
             <li>Python 3.11+, FastAPI, PostgreSQL + PGVector, Redis, Celery, Clean / Hexagonal Architecture, pluggy (extensions), SSE, WebSockets.</li>
           </ul>
 
-          <div class="positioning-subtitle">Stack RAISE (domaine / techno / rôle / localisation)</div>
-          <table class="tech-table">
-            <thead>
-              <tr>
-                <th>Domaine</th>
-                <th>Technologie / Outil</th>
-                <th>Rôle dans la solution</th>
-                <th>Où dans RAISE (exemples)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Front</td><td>React</td><td>Framework IHM SPA</td><td>package.json</td></tr>
-              <tr><td>Front</td><td>TypeScript</td><td>Typage statique frontend</td><td>front/tsconfig*.json</td></tr>
-              <tr><td>Front</td><td>Vite</td><td>Serveur dev + build frontend</td><td>package.json scripts</td></tr>
-              <tr><td>Front</td><td>MUI + Emotion</td><td>Composants UI + styling</td><td>deps @mui/*, @emotion/*</td></tr>
-              <tr><td>Front</td><td>TanStack Router</td><td>Routing côté client</td><td>dep @tanstack/react-router</td></tr>
-              <tr><td>Front</td><td>TanStack Query</td><td>Cache / appels API / synchro données</td><td>dep @tanstack/react-query</td></tr>
-              <tr><td>Front</td><td>TanStack Table</td><td>Grilles/tabulaires</td><td>dep @tanstack/react-table</td></tr>
-              <tr><td>Front</td><td>Zustand</td><td>State management léger</td><td>dep zustand</td></tr>
-              <tr><td>Front</td><td>i18next + react-i18next</td><td>Internationalisation</td><td>deps + locales</td></tr>
-              <tr><td>Front</td><td>MSAL + MGT</td><td>Intégration auth Microsoft</td><td>deps @azure/msal-browser, @microsoft/mgt-*</td></tr>
-              <tr><td>Back</td><td>FastAPI</td><td>API backend principale</td><td>server.py</td></tr>
-              <tr><td>Back</td><td>Uvicorn</td><td>Serveur ASGI d'exécution</td><td>pyproject.toml</td></tr>
-              <tr><td>Back</td><td>Pydantic + pydantic-settings</td><td>Validation des données + config</td><td>pyproject.toml</td></tr>
-              <tr><td>Back</td><td>Authlib + PyJWT</td><td>OAuth/OIDC + JWT</td><td>pyproject.toml</td></tr>
-              <tr><td>IA</td><td>LangChain</td><td>Orchestration LLM, tools, RAG</td><td>pyproject.toml + extensions</td></tr>
-              <tr><td>IA</td><td>LangGraph</td><td>Workflows agents multi-étapes</td><td>pyproject.toml, extension langgraph</td></tr>
-              <tr><td>IA</td><td>LiteLLM + langchain_litellm</td><td>Abstraction multi-fournisseurs LLM</td><td>pyproject.toml</td></tr>
-              <tr><td>IA</td><td>Langfuse</td><td>Observabilité/traces LLM</td><td>extension litellm_langfuse</td></tr>
-              <tr><td>Extensibilité</td><td>Pluggy</td><td>Système de hooks/plugins backend</td><td>hooks.py</td></tr>
-              <tr><td>IA/Interop</td><td>MCP (mcp, fastmcp, langchain_mcp_adapters)</td><td>Connexion standardisée à outils externes</td><td>pyproject.toml, docs MCP</td></tr>
-              <tr><td>Ingestion docs</td><td>MarkItDown</td><td>Conversion fichiers en markdown pour ingestion</td><td>small_file_handler.py</td></tr>
-              <tr><td>Async</td><td>Celery</td><td>Exécution tâches asynchrones</td><td>docker-compose-dev.yml</td></tr>
-              <tr><td>Async</td><td>Redis</td><td>Broker/queue et cache</td><td>docker-compose-dev.yml</td></tr>
-              <tr><td>Async</td><td>Flower</td><td>Monitoring workers Celery</td><td>pyproject.toml, compose dev</td></tr>
-              <tr><td>Data</td><td>PostgreSQL</td><td>Base relationnelle principale</td><td>docker-compose*.yml, Terraform DB</td></tr>
-              <tr><td>Data</td><td>pgvector</td><td>Recherche vectorielle/embeddings</td><td>image ankane/pgvector, docs DB</td></tr>
-              <tr><td>Data</td><td>Psycopg + psycopg-pool</td><td>Connexion et pooling PostgreSQL</td><td>pyproject.toml</td></tr>
-              <tr><td>Data</td><td>Flyway</td><td>Migrations SQL versionnées</td><td>scripts, README.md</td></tr>
-              <tr><td>Infra</td><td>Docker / Docker Compose</td><td>Conteneurisation local/dev/prod</td><td>Dockerfile, docker-compose*.yml</td></tr>
-              <tr><td>Infra</td><td>Terraform</td><td>Provisioning infra cloud</td><td>infra/azure/**</td></tr>
-              <tr><td>Infra</td><td>Azure Key Vault</td><td>Gestion des secrets</td><td>module 01_secrets</td></tr>
-              <tr><td>Infra</td><td>Azure ACI</td><td>Hébergement conteneurs app</td><td>module 05_app</td></tr>
-              <tr><td>Infra</td><td>Azure Application Gateway</td><td>Load balancer / entrée HTTP(S)</td><td>module 06_loadbalancer</td></tr>
-              <tr><td>Infra</td><td>Azure Log Analytics</td><td>Logs/observabilité infra</td><td>module 02_observabilty</td></tr>
-              <tr><td>CI/CD</td><td>Azure DevOps Pipeline</td><td>Plan/apply Terraform + exécution Flyway</td><td>azure-pipelines-terraform.yml</td></tr>
-            </tbody>
-          </table>
         </div>
 
       </section>
@@ -383,6 +335,16 @@
               <li>Exécution applicative : aca-aria-app-back-{env}, aca-aria-app-front-{env}, agw-aria-app-{env} + pip-aria-app-{env}, identités uac-aria-app-{env} &amp; uag-aria-app-{env}, stockage aria-app-{env}-data.</li>
             </ul>
 
+            <p class="experience-subtitle">IA Agentique &amp; Orchestration (agents, n8n, MCP)</p>
+            <ul>
+              <li>Conception et exposition de serveurs MCP (Model Context Protocol) pour standardiser l'accès des agents IA aux outils et données métier (RH, Juridique, DSI).</li>
+              <li>Mise en place de workflows d'orchestration avec n8n pour automatiser des chaînes d'agents (déclenchement d'actions, appels d'API internes, enrichissement de données, notifications).</li>
+              <li>Développement d'agents IA outillés (tool use / function calling) avec LangChain / LangGraph, capables d'enchaîner des étapes de raisonnement et d'invoquer des outils métiers via MCP.</li>
+              <li>Sécurisation des accès agentiques : permissions ABAC par outil/agent, isolation des environnements, traçabilité et observabilité des appels d'outils via Langfuse.</li>
+              <li>Définition de garde-fous et de tests de non-régression spécifiques aux comportements agentiques (boucles, appels d'outils erronés, dérive de coûts).</li>
+              <li>Veille et évaluation des nouvelles générations d'outils d'IA agentique (agents de type Claude Code) pour identifier des cas d'usage internes pertinents.</li>
+            </ul>
+
             <p class="experience-subtitle">Résultats IA concrets</p>
             <ul>
               <li>Stabilisation d’une plateforme RAG en production (PDF volumineux, corpus hétérogènes).</li>
@@ -390,72 +352,74 @@
               <li>Amélioration mesurable de la qualité des réponses (sources citées, bruit réduit).</li>
               <li>Mise en place de tests IA automatisés (qualité, sécurité, non-régression).</li>
               <li>Industrialisation des usages IA via assistants métiers (RH, DSI, Juridique).</li>
+              <li>Mise en production de premiers agents outillés (MCP) orchestrés via n8n, avec garde-fous et observabilité dédiés.</li>
             </ul>
 
             <p class="experience-subtitle">Environnement IA</p>
             <ul>
               <li>IA : RAG, embeddings text-embedding-3, retrieval hybride BM25 + vecteur, reranking BERT, multi-LLM</li>
+              <li>Agentique : MCP (serveurs custom), agents outillés (tool use), n8n, LangGraph</li>
               <li>Plateforme : FastAPI, PostgreSQL/PGVector, Redis</li>
               <li>Cloud IA : Azure OpenAI, Azure AI Foundry, Vertex AI, Bedrock</li>
               <li>Observabilité IA : Langfuse, métriques qualité/coût</li>
               <li>Sécurité IA : OIDC, scopes, ABAC, API Management</li>
             </ul>
 
-            <p class="experience-subtitle">Stack détaillée RAISE (AGIRC-ARRCO)</p>
-            <table class="tech-table">
-              <thead>
-                <tr>
-                  <th>Domaine</th>
-                  <th>Technologie / Outil</th>
-                  <th>Rôle dans la solution</th>
-                  <th>Où dans RAISE (exemples)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Front</td><td>React</td><td>Framework IHM SPA</td><td>package.json</td></tr>
-                <tr><td>Front</td><td>TypeScript</td><td>Typage statique frontend</td><td>front/tsconfig*.json</td></tr>
-                <tr><td>Front</td><td>Vite</td><td>Serveur dev + build frontend</td><td>package.json scripts</td></tr>
-                <tr><td>Front</td><td>MUI + Emotion</td><td>Composants UI + styling</td><td>deps @mui/*, @emotion/*</td></tr>
-                <tr><td>Front</td><td>TanStack Router</td><td>Routing côté client</td><td>dep @tanstack/react-router</td></tr>
-                <tr><td>Front</td><td>TanStack Query</td><td>Cache / appels API / synchro données</td><td>dep @tanstack/react-query</td></tr>
-                <tr><td>Front</td><td>TanStack Table</td><td>Grilles/tabulaires</td><td>dep @tanstack/react-table</td></tr>
-                <tr><td>Front</td><td>Zustand</td><td>State management léger</td><td>dep zustand</td></tr>
-                <tr><td>Front</td><td>i18next + react-i18next</td><td>Internationalisation</td><td>deps + locales</td></tr>
-                <tr><td>Front</td><td>MSAL + MGT</td><td>Intégration auth Microsoft</td><td>deps @azure/msal-browser, @microsoft/mgt-*</td></tr>
-                <tr><td>Back</td><td>FastAPI</td><td>API backend principale</td><td>server.py</td></tr>
-                <tr><td>Back</td><td>Uvicorn</td><td>Serveur ASGI d'exécution</td><td>pyproject.toml</td></tr>
-                <tr><td>Back</td><td>Pydantic + pydantic-settings</td><td>Validation des données + config</td><td>pyproject.toml</td></tr>
-                <tr><td>Back</td><td>Authlib + PyJWT</td><td>OAuth/OIDC + JWT</td><td>pyproject.toml</td></tr>
-                <tr><td>IA</td><td>LangChain</td><td>Orchestration LLM, tools, RAG</td><td>pyproject.toml + extensions</td></tr>
-                <tr><td>IA</td><td>LangGraph</td><td>Workflows agents multi-étapes</td><td>pyproject.toml, extension langgraph</td></tr>
-                <tr><td>IA</td><td>LiteLLM + langchain_litellm</td><td>Abstraction multi-fournisseurs LLM</td><td>pyproject.toml</td></tr>
-                <tr><td>IA</td><td>Langfuse</td><td>Observabilité/traces LLM</td><td>extension litellm_langfuse</td></tr>
-                <tr><td>Extensibilité</td><td>Pluggy</td><td>Système de hooks/plugins backend</td><td>hooks.py</td></tr>
-                <tr><td>IA/Interop</td><td>MCP (mcp, fastmcp, langchain_mcp_adapters)</td><td>Connexion standardisée à outils externes</td><td>pyproject.toml, docs MCP</td></tr>
-                <tr><td>Ingestion docs</td><td>MarkItDown</td><td>Conversion fichiers en markdown pour ingestion</td><td>small_file_handler.py</td></tr>
-                <tr><td>Async</td><td>Celery</td><td>Exécution tâches asynchrones</td><td>docker-compose-dev.yml</td></tr>
-                <tr><td>Async</td><td>Redis</td><td>Broker/queue et cache</td><td>docker-compose-dev.yml</td></tr>
-                <tr><td>Async</td><td>Flower</td><td>Monitoring workers Celery</td><td>pyproject.toml, compose dev</td></tr>
-                <tr><td>Data</td><td>PostgreSQL</td><td>Base relationnelle principale</td><td>docker-compose*.yml, Terraform DB</td></tr>
-                <tr><td>Data</td><td>pgvector</td><td>Recherche vectorielle/embeddings</td><td>image ankane/pgvector, docs DB</td></tr>
-                <tr><td>Data</td><td>Psycopg + psycopg-pool</td><td>Connexion et pooling PostgreSQL</td><td>pyproject.toml</td></tr>
-                <tr><td>Data</td><td>Flyway</td><td>Migrations SQL versionnées</td><td>scripts, README.md</td></tr>
-                <tr><td>Infra</td><td>Docker / Docker Compose</td><td>Conteneurisation local/dev/prod</td><td>Dockerfile, docker-compose*.yml</td></tr>
-                <tr><td>Infra</td><td>Terraform</td><td>Provisioning infra cloud</td><td>infra/azure/**</td></tr>
-                <tr><td>Infra</td><td>Azure Key Vault</td><td>Gestion des secrets</td><td>module 01_secrets</td></tr>
-                <tr><td>Infra</td><td>Azure ACI</td><td>Hébergement conteneurs app</td><td>module 05_app</td></tr>
-                <tr><td>Infra</td><td>Azure Application Gateway</td><td>Load balancer / entrée HTTP(S)</td><td>module 06_loadbalancer</td></tr>
-                <tr><td>Infra</td><td>Azure Log Analytics</td><td>Logs/observabilité infra</td><td>module 02_observabilty</td></tr>
-                <tr><td>CI/CD</td><td>Azure DevOps Pipeline</td><td>Plan/apply Terraform + exécution Flyway</td><td>azure-pipelines-terraform.yml</td></tr>
-              </tbody>
-            </table>
           </div>
         </div>
         <div class="experience-row">
           <div class="experience-left">
+            <p class="experience-company">RATP</p>
+            <p class="experience-duration">1 an et 5 mois</p>
+            <p class="experience-dates">Mars 2024 à août 2025</p>
+          </div>
+          <div class="experience-right">
+            <p class="experience-role">Tech Lead Java / Architecte Backend</p>
+            <p class="experience-subtitle">Responsabilités</p>
+            <ul>
+              <li>Analyse d'impact et étude de faisabilité dans le cadre d'un projet stratégique de migration vers un nouveau cloud (Hexagone).</li>
+              <li>Estimation des charges et priorisation des sujets techniques et fonctionnels, en arbitrage avec les enjeux métier.</li>
+              <li>Définition de la stratégie de migration par lots, en coordination avec les équipes projet, produit et techniques.</li>
+              <li>Rédaction des spécifications techniques détaillées (STD) avec diagrammes UML, pour cadrer les évolutions et sécuriser les décisions techniques.</li>
+              <li>Coordination avec les équipes produit afin de garantir la continuité de service pendant la migration.</li>
+              <li>Étude de la documentation HxGN EAM et génération des bibliothèques nécessaires à la consommation des API REST et SOAP.</li>
+              <li>Migration d'une application Spring Boot de la version 1.5 vers la version 2.7.18 et refonte de l'architecture backend (design patterns Factory, Strategy, Adapter, Composite, principes SOLID).</li>
+              <li>Mise en œuvre d'une couche de sécurité OAuth2 et intégration de la documentation d'API via Swagger / OpenAPI.</li>
+              <li>Conception et exposition de webservices REST et SOAP pour les applications mobiles AGORA MOB et PI, et adaptation à la consommation des webservices HxGN EAM en mode SaaS.</li>
+              <li>Automatisation de tâches récurrentes via scripts Shell, mise en place d'un prototype de tests automatiques inter-applications et de tests unitaires, d'intégration et système.</li>
+            </ul>
+
+            <p class="experience-subtitle">Environnement technique</p>
+            <ul>
+              <li>Backend : Spring Boot, Java, REST, SOAP, OAuth2, Swagger (OpenAPI)</li>
+              <li>Conception : Design Patterns (Factory, Strategy, Adapter, Composite), SOLID, UML</li>
+              <li>Outils : Shell, Copilot, Kubernetes, HxGN EAM</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="experience-row">
+          <div class="experience-left">
             <p class="experience-company">DORIA</p>
-            <p class="experience-duration">1 an et 10 mois</p>
-            <p class="experience-dates">Novembre 2023 à août 2025</p>
+            <p class="experience-duration">1 an et 5 mois</p>
+            <p class="experience-dates">Mars 2024 à août 2025</p>
+          </div>
+          <div class="experience-right">
+            <p class="experience-role">Lead IA / R&amp;D — accompagnement à distance (temps partiel, en parallèle de la mission RATP)</p>
+            <p class="experience-subtitle">Responsabilités</p>
+            <ul>
+              <li>Poursuite à distance, hors temps de la mission RATP, d'un accompagnement ponctuel sur les projets IA initiés précédemment (Maya, StudyAsst).</li>
+              <li>Suivi et conseil sur l'évolution des pipelines RAG et l'intégration de nouveaux modèles LLM.</li>
+              <li>Support à la montée en compétence de l'équipe sur les bonnes pratiques IA (RAG, prompt engineering, observabilité).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="experience-row">
+          <div class="experience-left">
+            <p class="experience-company">DORIA</p>
+            <p class="experience-duration">4 mois</p>
+            <p class="experience-dates">Novembre 2023 à mars 2024</p>
           </div>
           <div class="experience-right">
             <p class="experience-role">Lead IA / R&amp;D</p>
@@ -497,7 +461,7 @@
         </div>
       </section>
     </main>
-    
+
 
     <main class="page">
       <section class="experience-section">
